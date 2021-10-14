@@ -1,4 +1,4 @@
-# Webpack config for modern web projects
+# Webpack config for modern web projects + three.js
 
 ## Setup
 Download [Node.js](https://nodejs.org/en/download/) and run the following commands:
