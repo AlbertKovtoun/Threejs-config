@@ -1,12 +1,19 @@
 import * as THREE from "three"
-import { canvas, sizes } from "./scene"
+import { canvas, sizes } from "./Experience"
 
-export let renderer
+export class Renderer {
+  constructor() {
+    this.renderer
 
-export const setRenderer = () => {
-  renderer = new THREE.WebGLRenderer({
-    canvas: canvas,
-  })
-  renderer.setSize(sizes.width, sizes.height)
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+    this.setRenderer()
+  }
+
+  setRenderer() {
+    this.renderer = new THREE.WebGLRenderer({
+      canvas: canvas,
+      antialias: true,
+    })
+    this.renderer.setSize(sizes.width, sizes.height)
+    this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+  }
 }
