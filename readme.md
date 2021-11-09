@@ -14,4 +14,4 @@ npm run dev
 npm run build
 ```
 
-Made by Albert Kovtoun, CEO of [Suro Development](https://www.suro.tech/).
+Made by Albert Kovtoun
