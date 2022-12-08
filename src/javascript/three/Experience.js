@@ -8,6 +8,7 @@ import { Loaders } from "./Loaders"
 
 import defaultVertexShader from "../../shaders/default/vertex.glsl?raw"
 import defaultFragmentShader from "../../shaders/default/fragment.glsl?raw"
+import { Particles } from "./Particles"
 
 const stats = new Stats()
 stats.showPanel(0) // 0: fps, 1: ms, 2: mb, 3+: custom
@@ -25,15 +26,16 @@ const plane = new THREE.Mesh(
     vertexShader: defaultVertexShader,
     fragmentShader: defaultFragmentShader,
     side: THREE.DoubleSide,
-    // transparent: true,
+    transparent: true,
 
     uniforms: {
-      uTexture: { value: loaders.textureLoader.load("/images/Duck.jpg") }
-    }
+      uTexture: { value: loaders.textureLoader.load("/images/Duck.jpg") },
+    },
   })
-
 )
 scene.add(plane)
+
+export const particles = new Particles()
 
 export const sizes = new Sizes()
 
